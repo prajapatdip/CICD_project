@@ -64,7 +64,7 @@ jobs:
 
           tags: /
             prajapatdip/tg-redirect:${{ github.sha }}
-            ghrc.io/prajapat/tg-redirect:${{ github.sha }}
+            ghrc.io/prajapatdip/tg-redirect:${{ github.sha }}
 
           push: ${{ github.ref == 'refs/head/master' }}
 
