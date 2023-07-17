@@ -64,6 +64,7 @@ jobs:
 
           tags: /
             prajapatdip/tgredirect:${{ github.sha }}
+            ghcr.io/prajapatdip/tgredirect:${{ github.sha }}
 
           push: ${{ github.ref == 'refs/heads/master' }}
 
