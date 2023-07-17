@@ -63,8 +63,8 @@ jobs:
           context: .
 
           tags: /
-            prajapatdip/tg-redirect:${{ github.sha }}
-            ghcr.io/prajapatdip/tg-redirect:${{ github.sha }}
+            prajapatdip/tgredirect:${{ github.sha }}
+            ghcr.io/prajapatdip/tgredirect:${{ github.sha }}
 
           push: ${{ github.ref == 'refs/heads/master' }}
 
@@ -85,7 +85,7 @@ jobs:
           git config --global user.email "${{ secrets.G_EMAIL }}"
           git config --global user.name "${{ secrets.G_UNAME }}"
           echo ${{ github.sha }}
-          sed -i "s#${{ github.actor }}.*#${{ github.actor }}/tg-redirect:${{ github.sha }}#g" deployment.yaml
+          sed -i "s#${{ github.actor }}.*#${{ github.actor }}/tgredirect:${{ github.sha }}#g" deployment.yaml
           git add -A
           git commit -am "Update image for - ${{ github.sha }}"
       - run: echo ${{ github }}
