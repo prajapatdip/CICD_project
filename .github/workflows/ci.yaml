@@ -66,7 +66,7 @@ jobs:
             prajapatdip/tg-redirect:${{ github.sha }}
             ghcr.io/prajapatdip/tg-redirect:${{ github.sha }}
 
-          push: ${{ github.ref == 'refs/head/master' }}
+          push: ${{ github.ref == 'refs/heads/master' }}
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
