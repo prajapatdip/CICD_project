@@ -81,9 +81,9 @@ jobs:
           ref: 'master'
           token: ${{ secrets.G_TOKEN }}
       - name: setup git config
-        run: /
+        run: |
           git config --global user.email "${{ secrets.G_EMAIL }}"
-          git config --global user.name "${{ secrets.G_UNAME }}"
+          git config --global user.name "prajapatdip"
           echo ${{ github.sha }}
           sed -i "s#${{ github.actor }}.*#${{ github.actor }}/tgredirect:${{ github.sha }}#g" deployment.yaml
           git add -A
