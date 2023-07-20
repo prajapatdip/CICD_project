@@ -1,27 +1,25 @@
+# CI/CD Pipeline for NodeJS Application using GitHub Actions, ArgoCD and Kubernetes
 
-# Application Deployment on Minikube Cluster
+![CI_CD](https://github.com/prajapatdip/CI_project/assets/104031556/6a04a390-c85b-40ee-a533-93b63a572bb6)
 
-In this project I taken tg-redirect project from github and I used frontend of this application to deploy it on Minikube Cluster.
 
-This project is based on frontend application deployment on Minikube clusetr using kubernetes.
-## Project Description
+Here are the step-by-step details to set up an end-to-end CI/CD pipeline for a NodeJS application using GitHub Actions, ArgoCD and Kubernetes:
 
-1. Created Dockerfile for building the docker image of application.
-2. Deployed craeted image to my personal docker hub repository.
-3. Created yaml files for deploying the application.
-4. Created pod.yaml file for deploying the image of application on the Minikube cluster.
-5. Created deployment.yaml file for deploying the multiple copies of images (replicas) of the application on the Minikube cluster.
-6. Created service.yaml file of nodeport type for accessing the application locally.
-7. After creating the files deployed it to the minikube cluster using kubectl commands.
-8. Get IP address of the service using minikue command and accessed it locally.
-## Tools
+Prerequisites:
 
-During the project I used the Lens IDE for monitoring the minikube cluster.
-Using this IDE you can manage the pods, deploymets and services, etc. using this graphical inteface.
+    - Application code hosted on Git repositroy.
+    - Kubernetes Cluster
+    - ArgoCD
 
-![Lens](https://github.com/prajapatdip/Kubernetes-first/assets/104031556/59ab3812-90f1-4b76-9659-6223f33e29e1)
+This is the Source Code repositroy also contains the Worflow of CI pipeline.
 
-## Run Locally
+Location of Workflow files.
+```
+    .github/workflows
+```
+Link for Menifest repositroy: https://github.com/prajapatdip/k8s_first_argocd
+
+## Run Application  Locally using Kubernetes
 
 ```
     git clone https://github.com/prajapatdip/Kubernetes-first.git
@@ -30,8 +28,8 @@ Using this IDE you can manage the pods, deploymets and services, etc. using this
 Install the minikube and kubectl cli through the folliwing documentation:
 
 ```
-Minikube: https://minikube.sigs.k8s.io/docs/start
-kubectl CLI: https://kubernetes.io/docs/tasks/tools
+    Minikube: https://minikube.sigs.k8s.io/docs/start
+    kubectl CLI: https://kubernetes.io/docs/tasks/tools
 ```
 
 Deploying the application to the minikube.
@@ -53,8 +51,3 @@ Getting the URL from Minikube cluster.
 ```
     minikube service my-service --url
 ```
-Copy the URL and past it on any browser to run the application.
-
-![api](https://github.com/prajapatdip/Kubernetes-first/assets/104031556/68338a81-a572-4008-bd9f-4cb4ae3d416b)
-
-Docker image: https://hub.docker.com/repository/docker/prajapatdip/tg-redirect/general
